@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandsOn Six</title>
+    <style>
+        h3
+        {
+            color: red;
+        }
+        h4
+        {
+            color: blue;
+        }
+        h1
+        {
+            color: lightgreen;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>HandsOn on Problem Solving</h1>
+    <h3>Q1)Find the Smaller Angle</h3>
+    <h4>Sol: <br><pre>
+    var Minimal_Angle = (h, m) => 
+    {
+    var hourAngle = ((h * 60) + m) * 0.5;
+    var minuteAngle = m * 6;
+    var angle = Math.abs(hourAngle - minuteAngle)
+    if(angle > 180)
+    {
+      return 360 - angle;
+    }
+    else
+    {
+    return angle;
+    }   
+};</pre></h4>
+<h3>Q2)Check whether the year is Leap year or not.</h3>
+    <h4>Sol: <br><pre>
+        var Check_Leap = (year) => 
+        {
+        if((year % 4 == 0)&& (year % 100 !== 0) || (year % 400 == 0))
+        {
+          return "Leap Year";
+        }
+        else
+        {
+        return "Non Leap Year";
+        }
+        };</pre></h4>
+        <h3>Q3)Perfect Number Check.</h3>
+    <h4>Sol: <br><pre>
+        var Perfect_Check = (N) => 
+        {
+              var sum = 0;
+              for(let i = 1 ; i <= N; i++)
+              { 
+               if(N % i == 0)
+               {
+                sum = sum + i;
+               }
+               }
+               if(sum == N)
+               {
+                 return "YES";
+               }
+               else
+               {
+                return "NO";
+               }
+        };</pre></h4>
+        <h3>Q4)Reverse a Number.</h3>
+    <h4>Sol: <br><pre>
+        var Reverse_Number = (N) => 
+        {
+          N = N + ' '; 
+          let b = Math.floor(N.split('').reverse().join(''));
+          return b;
+        };</pre></h4>
+        <h3>Q5)Substring Check.</h3>
+    <h4>Sol: <br><pre>
+        var Substring_Check = (S1, S2) => 
+        {
+          
+         var b = S1.includes(S2);
+            if(b==true)
+            {
+               return "YES";
+            }
+            else
+            {
+               return "NO";
+            }   
+        };</pre></h4> 
+</body>
+</html>
+ <!-- <h3>Q1)</h3>
+    <h4>Sol: <br><pre></pre></h4> -->
